@@ -1,0 +1,51 @@
+@-webkit-keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-moz-keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.main
+
+  &__nav
+    font-family: $base-font
+
+  &__link
+    position: relative
+    text-transform: uppercase
+    padding-right: 30px
+    right: 0
+    text-align: right
+    display: inline-block
+
+  &__centered-body
+    -webkit-animation: fade-in 0.2s ease-in
+    -moz-animation:    fade-in 0.2s ease-in
+    -o-animation:      fade-in 0.2s ease-in
+    animation:         fade-in 0.2s ease-in
+    display: table
+    margin: auto auto
+    font-family: $josefin-slab
+
+  &__text
+    position: relative
+    margin-top: 20%
+    font-family: $josefin-slab
+    cursor: default
+    font-size: 15em
+@media (max-width: 700px)
+  .main
+    &__text
+      font-size: 7em
+

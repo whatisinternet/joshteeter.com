@@ -1,0 +1,51 @@
+{
+  "name": "joshteeter.com",
+  "version": "0.1.0",
+  "description": "Personal website for Josh Teeter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whatisinternet/joshteeter.com.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register --recursive --require ./test/setup.coffee",
+    "deploy": "NODE_ENV=production webpack -p --config config/webpack.production.config.js",
+    "app": "webpack-dev-server --devtool eval --progress --colors --host 0.0.0.0 --config config/webpack.config.js"
+  },
+  "author": "Josh Teeter",
+  "license": "BSD 2-Clause",
+  "dependencies": {
+    "bemmer-node": "^0.1.2",
+    "coffee-script": "^1.9.3",
+    "devicon": "github:konpa/devicon",
+    "gravatar": "^1.4.0",
+    "lodash": "^3.10.0",
+    "materialize-css": "^0.97.5",
+    "moment": "^2.10.6",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-mini-router": "^2.0.0",
+    "react-redux": "^4.0.1",
+    "redux": "^3.0.5",
+    "coffee-loader": "^0.7.2",
+    "css-loader": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "fs-extra": "^0.26.3",
+    "html-loader": "^0.4.0",
+    "node-sass": "^3.1.2",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.8.3",
+    "url-loader": "^0.5.7",
+    "superagent": "^1.6.1"
+  },
+  "devDependencies": {
+    "cli-color": "^1.1.0",
+    "del": "^2.2.0",
+    "jsdom": "^7.2.2",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.5",
+    "webpack": "^1.8.10",
+    "webpack-dev-server": "~1.12.1"
+  }
+}
