@@ -1,4 +1,4 @@
-REPO_ENDPOINT = "https://api.github.com/users/whatisinternet/repos"
+REPO_ENDPOINT = "https://api.github.com/users/whatisinternet/repos?owner=true&sort=updated"
 
 GitHubModel = require('../models/github')
 

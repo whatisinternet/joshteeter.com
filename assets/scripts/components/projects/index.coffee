@@ -42,6 +42,10 @@ module.exports = React.createFactory React.createClass
                           "#{project.stars}  "
                         i className:'fa fa-code-fork',
                           project.forks
+                        br {}
+                        if project.homepage? != ""
+                          a href: project.homepage,
+                            project.homepage
                   div
                     className: 'card-action',
                     i className: "devicon-#{project.language?.toLowerCase()}-plain align-right"

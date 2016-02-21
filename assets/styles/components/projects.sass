@@ -6,6 +6,8 @@ $haskell: #00695c
 $python: #01579b
 $viml: #1b5e20
 $shell: #33691e
+$elm: #00bcd4
+$html: #c62828
 
 @-webkit-keyframes slide-fade-in
   0%
@@ -62,6 +64,12 @@ $shell: #33691e
   &__content
     max-height: 100% !important
     overflow: auto !important
+
+.html
+  @include language-colour($html)
+
+.elm
+  @include language-colour($elm)
 
 .coffeescript
   @include language-colour($coffee)
