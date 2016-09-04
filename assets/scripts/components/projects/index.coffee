@@ -48,7 +48,14 @@ module.exports = React.createFactory React.createClass
                             project.homepage
                   div
                     className: 'card-action',
-                    i className: "devicon-#{project.language?.toLowerCase()}-plain align-right"
+                    if project.language?.toLowerCase() == "viml"
+                      i className: "devicons devicons-vim align-right"
+                    else if project.language?.toLowerCase() == "shell"
+                      i className: "devicons devicons-terminal align-right"
+                    else if project.language?.toLowerCase() == "html"
+                      i className: "devicons devicons-html5 align-right"
+                    else
+                      i className: "devicons devicons-#{project.language?.toLowerCase()} align-right"
                     a
                       href: project.url,
                         " check it out on Github"

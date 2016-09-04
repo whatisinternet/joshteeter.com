@@ -1,4 +1,27 @@
+@-webkit-keyframes slide-fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-moz-keyframes slide-fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes slide-fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
 .contact
+  -webkit-animation: fade-in 0.4s ease-in
+  -moz-animation:    fade-in 0.4s ease-in
+  -o-animation:      fade-in 0.4s ease-in
+  animation:         fade-in 0.4s ease-in
+
   &__notification
     -o-transition:      .3s
     -ms-transition:     .3s

@@ -43,9 +43,19 @@
     margin-top: 20%
     font-family: $josefin-slab
     cursor: default
-    font-size: 15em
+    font-size: 15rem
+    font-weight: 100
+    white-space: nowrap
+
+    &--start
+      color: #3498DB
+
+@media (max-width: 1200px)
+  .main
+    &__text
+      font-size: 10em
+
 @media (max-width: 700px)
   .main
     &__text
       font-size: 7em
-

@@ -16,7 +16,7 @@ module.exports = React.createFactory React.createClass
 
     div
       style: {border: 'none'}
-      className: bem.with(classNames: 'document-container card-panel grey darken-4 blue-grey-text text-lighten-5 hoverable'),
+      className: bem.with(classNames: 'document-container card-panel transparent blue-grey-text text-lighten-5 hoverable'),
 
       div className: 'row',
         div className: 'col s12 l4 center-align',

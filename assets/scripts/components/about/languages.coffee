@@ -1,4 +1,4 @@
-{div, img, h1, h2,  p, span, i}  = React.DOM
+{div, img, a, h2,  p, span, i}  = React.DOM
 
 module.exports = React.createFactory React.createClass
   displayName: "about:languages"
@@ -10,19 +10,28 @@ module.exports = React.createFactory React.createClass
     div {},
       p {},
         'I like to work with these languages:'
-      span style: {display: 'inline-block'},
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-ruby-plain-wordmark',
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-python-plain-wordmark',
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-coffeescript-original-wordmark',
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-sass-original'
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-postgresql-plain-wordmark',
+      span style: {display: 'flex'},
+        h2 {},
+          a href: "https://www.ruby-lang.org/",
+            span
+              className: 'devicons devicons-ruby',
+        h2 {},
+          a href: "https://www.rust-lang.org/",
+            span
+              className: 'devicons devicons-rust',
+        h2 {},
+          a href: "https://www.python.org/",
+            span
+              className: 'devicons devicons-python',
+        h2 {},
+          a href: "http://coffeescript.org/",
+            span
+              className: 'devicons devicons-coffeescript',
+        h2 {},
+          a href: "http://sass-lang.com/",
+            span
+              className: 'devicons devicons-sass'
+        h2 {},
+          a href: "https://www.postgresql.org/",
+            span
+              className: 'devicons devicons-postgresql',

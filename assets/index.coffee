@@ -1,8 +1,6 @@
 require 'materialize-css/dist/css/materialize.css'
-require 'devicon/devicon.css'
-require 'devicon/devicon-colors.css'
 require './styles/index'
-require 'jQuery/dist/jquery.js'
+require 'devicons'
 require 'materialize-css/dist/js/materialize.min.js'
 
 ReactRedux = require('react-redux')

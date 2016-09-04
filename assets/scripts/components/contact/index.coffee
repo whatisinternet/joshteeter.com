@@ -9,7 +9,7 @@ module.exports = React.createFactory React.createClass
 
     div
       style: {border: 'none'}
-      className: bem.with(classNames: 'document-container card-panel grey darken-4 blue-grey-text text-lighten-5 hoverable'),
+      className: bem.with(classNames: 'document-container card-panel transparent blue-grey-text text-lighten-5 hoverable'),
       h1 className: bem.with(element: 'notification'),
         a
           href: 'mailto:joshteeter+website@gmail.com',

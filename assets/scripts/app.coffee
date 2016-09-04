@@ -11,10 +11,10 @@ module.exports = React.createFactory React.createClass
 
   mixins: [RouterMixin]
 
-  routes: require('../config/routes')
+  routes: require('../../config/routes')
 
   getSelectedPageFromState: (path) ->
-    _.startCase require('../config/routes')[path]
+    _.startCase require('../../config/routes')[path]
 
   render: ->
     if @state.path == "/"

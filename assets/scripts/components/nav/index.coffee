@@ -8,18 +8,19 @@ module.exports = React.createFactory React.createClass
 
   render: ->
     {currentPage} = @props
-    routes = require('../../../config/routes')
+    routes = require('../../../../config/routes')
     routeTitles = _.values routes
+    classes = ""
 
     bem = new Bemmer(block: 'navigation')
 
     div {},
       _.map routeTitles, (r, idx) ->
         if _.startCase(r) == currentPage
-          classes = "blue-text text-lighten-1"
           h4
             key: idx
-            className: bem.with(classNames: classes),
+            className: bem.with(classNames: classes)
+            style: { color: "#E7CC68"},
               _.startCase  r
         else
           h4

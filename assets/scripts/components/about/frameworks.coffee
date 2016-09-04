@@ -1,4 +1,4 @@
-{div, img, h1, h2,  p, span, i}  = React.DOM
+{div, img, a, h2,  p, span, i}  = React.DOM
 
 module.exports = React.createFactory React.createClass
   displayName: "about:frameworks"
@@ -10,10 +10,12 @@ module.exports = React.createFactory React.createClass
     div {},
       p {},
         'These frameworks:'
-      span style: {display: 'inline-block'},
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-react-original-wordmark',
-        h2 style: {display: 'inline-block'},
-          i
-            className: 'devicon-rails-plain-wordmark',
+      span style: {display: 'flex'},
+        h2 {},
+          a href: "https://facebook.github.io/react/",
+            span
+              className: 'devicons devicons-react',
+        h2 {},
+          a href: "http://rubyonrails.org/",
+            span
+              className: 'devicons devicons-ruby_on_rails',
