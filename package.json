@@ -25,6 +25,10 @@
     "react-mini-router": "^2.0.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "devicons": "^1.8.0",
+    "superagent": "^1.6.1"
+  },
+  "devDependencies": {
     "coffee-loader": "^0.7.2",
     "css-loader": "^0.9.1",
     "file-loader": "^0.8.5",
@@ -33,10 +37,7 @@
     "sass-loader": "^1.0.2",
     "style-loader": "^0.8.3",
     "url-loader": "^0.5.7",
-    "devicons": "^1.8.0",
-    "superagent": "^1.6.1"
-  },
-  "devDependencies": {
+    "compression-webpack-plugin": "^0.3.1",
     "webpack": "^1.8.10",
     "webpack-dev-server": "~1.12.1"
   }
