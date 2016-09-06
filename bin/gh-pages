@@ -9,19 +9,17 @@ npm install
 
 git branch -D gh-pages
 git checkout --quiet --orphan gh-pages
+git status
 
 npm run deploy
 
 rm -r ./assets
 rm -r ./config
 rm -r ./node_modules
+rm -r ./bin
 rm -r ./index.html
 rm -r ./package.json
 rm -r ./README.md
-
-echo bin >> .gitignore
-git add .gitignore
-git commit -m "Added bin"
 
 mv dist/* .
 
