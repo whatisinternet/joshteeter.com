@@ -7,13 +7,17 @@ import Html.Events exposing (onClick)
 import Views.Main.Index exposing (indexView)
 import Views.Contact.Index exposing (contactView)
 import Views.About.Index exposing (aboutView)
+import Views.Nav.Index exposing (navView)
 
 
 -- View
 view number =
-  aboutView
-  -- contactView
-  -- indexView
+  div []
+      [ navView "about"
+      , aboutView
+      -- , contactView
+      -- , indexView
+      ]
 
 -- Main
 main =
