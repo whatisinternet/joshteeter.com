@@ -1,6 +1,7 @@
 module Views.Index exposing (view)
 
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Types.Index exposing (Model, Projects, Route)
 import Messages.Index exposing (Msg)
 
@@ -21,17 +22,17 @@ page model =
     Types.Index.IndexRoute ->
       indexView
     Types.Index.ProjectsRoute ->
-      div []
+      div [ class "container" ]
           [ navView "projects"
           , projectsView model.projects
           ]
     Types.Index.AboutRoute ->
-      div []
+      div [ class "container" ]
           [ navView "about"
           , aboutView
           ]
     Types.Index.ContactRoute ->
-      div []
+      div [ class "container" ]
           [ navView "contact"
           , contactView
           ]
