@@ -22,6 +22,7 @@ initialModel location =
     , route = currentRoute
     }, Cmd.none)
 
+-- Subscriptions
 subscriptions : Model -> Sub Msg
 subscriptions model =
   Sub.none
