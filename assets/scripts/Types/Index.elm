@@ -1,7 +1,15 @@
-module Types.Index exposing (Model, Project, Projects)
+module Types.Index exposing (..)
+
+type Route
+     = IndexRoute
+     | ProjectsRoute
+     | AboutRoute
+     | ContactRoute
 
 type alias Model =
-  { projects: Projects }
+  { projects: Projects
+  , route: Route
+  }
 
 type alias Project =
   { language: String

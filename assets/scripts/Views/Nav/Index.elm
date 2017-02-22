@@ -5,8 +5,9 @@ import Html.Attributes exposing (..)
 
 routes : List String
 routes =
-  [ "About"
+  [ "Main"
   , "Projects"
+  , "About"
   , "Contact"
   ]
 
@@ -24,7 +25,7 @@ childElement route currentPage  =
        |> text
     ]
   else
-    [ a [ route
+    [ a [ "#" ++ route
             |> String.toLower
             |> href
         ]
