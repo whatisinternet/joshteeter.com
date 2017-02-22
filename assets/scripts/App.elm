@@ -10,32 +10,41 @@ import Views.About.Index exposing (aboutView)
 import Views.Nav.Index exposing (navView)
 import Views.Projects.Index exposing (projectsView)
 
-import Types.Index exposing (Project, Projects)
+import Types.Index exposing (Model, Project, Projects)
 
 -- Update
-type Msg = Noop
+type Msg
+     = Noop
+     | Test
 
-update : Msg -> Int -> Int
+update : Msg -> Model -> Model
 update msg model =
   case msg of
     Noop ->
       model
+    Test ->
+      model
+
+-- Model
+initialModel : Model
+initialModel =
+    { projects = generateProjects }
 
 -- View
-view : Int -> Html msg
-view number =
+view : Model -> Html msg
+view model =
   div []
       [ navView "projects"
       -- , aboutView
       -- , contactView
       -- , indexView
-      , projectsView generateProjects
+      , projectsView model.projects
       ]
 
 -- Main
 main =
       beginnerProgram
-      { model = 0
+      { model = initialModel
       , update = update
       , view = view
       }
@@ -53,4 +62,3 @@ generateProjects =
   , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
   , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
   ]
-

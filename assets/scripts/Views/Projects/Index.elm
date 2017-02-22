@@ -18,10 +18,11 @@ containerClass language =
 
 homePage : String -> Html msg
 homePage homepage =
-  if homepage /= "" then
-     a [ href homepage ] [ text homepage ]
-  else
-    div [] []
+  case homepage of
+    "" ->
+      text homepage
+    _ ->
+      a [ href homepage ] [ text homepage ]
 
 reworkDevIcon : String -> String
 reworkDevIcon language =
@@ -81,7 +82,7 @@ groupProjects : Projects -> List (List Project)
 groupProjects projects =
   case List.take 3 projects of
     [] -> []
-    listHead -> listHead :: groupProjects (List.drop 3 projects)
+    projectGroup -> projectGroup :: groupProjects (List.drop 3 projects)
 
 projectsViews : Projects -> List (Html msg)
 projectsViews projects =

@@ -1,4 +1,7 @@
-module Types.Index exposing (Project, Projects)
+module Types.Index exposing (Model, Project, Projects)
+
+type alias Model =
+  { projects: Projects }
 
 type alias Project =
   { language: String
@@ -12,4 +15,3 @@ type alias Project =
 
 type alias Projects =
   List Project
-
