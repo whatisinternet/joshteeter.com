@@ -3,8 +3,7 @@ require './styles/index'
 require 'devicons'
 require 'materialize-css/dist/js/materialize.min.js'
 
-ReactRedux = require('react-redux')
-Provider = ReactRedux.Provider
+{Provider}= require('preact-redux')
 
 {store} = require('./scripts/reducers/github')
 

@@ -1,7 +1,6 @@
 App = require('../app.coffee')
 
-ReactRedux = require('react-redux')
-connect = ReactRedux.connect
+{connect}= require('preact-redux')
 
 mapStateToProps = (state) ->
   githubInfo: state

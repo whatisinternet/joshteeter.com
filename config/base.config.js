@@ -32,6 +32,8 @@ module.exports = {
       ".css",  "eot", "svg", "ttf", "woff", "woff2", "mp4"],
     modules: ['node_modules'],
       alias: {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat',
         'devicons': '../node_modules/devicons/css/devicons.css'
       }
   },
