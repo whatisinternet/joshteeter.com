@@ -1,4 +1,5 @@
 node_modules
 build/Release
+elm-stuff/
 logs
 *.log
