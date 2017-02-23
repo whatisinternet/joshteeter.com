@@ -5,21 +5,32 @@ rm ./dist/*.ttf
 rm ./dist/*.js*
 rm ./dist/*.woff*
 
-npm install
+yarn install
+elm package install
 
 git branch -D gh-pages
 git checkout --quiet --orphan gh-pages
 git status
 
-npm run deploy
+echo assets/ >> .gitignore
+echo node_modules/ >> .gitignore
+echo elm-stuff/ >> .gitignore
+echo config/ >> .gitignore
+echo slides/ >> .gitignore
+echo bin/ >> .gitignore
+echo elm-package.json >> .gitignore
+echo package.json >> .gitignore
+echo yarn.lock >> .gitignore
+echo .yarnclean >> .gitignore
+echo README.md >> .gitignore
 
-rm -r ./assets
-rm -r ./config
-rm -r ./node_modules
-rm -r ./bin
-rm -r ./index.html
-rm -r ./package.json
-rm -r ./README.md
+git status
+git reset
+git status
+git add .gitignore
+git commit -m "gitignore :shipit:"
+
+yarn run deploy
 
 mv dist/* .
 
