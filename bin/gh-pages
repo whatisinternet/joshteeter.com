@@ -12,6 +12,7 @@ git branch -D gh-pages
 git checkout --quiet --orphan gh-pages
 git status
 
+rm index.html
 echo assets/ >> .gitignore
 echo node_modules/ >> .gitignore
 echo elm-stuff/ >> .gitignore
@@ -29,6 +30,7 @@ git status
 git reset
 git status
 git add .gitignore
+git add CNAME
 git commit -m "gitignore :shipit:"
 
 yarn run deploy
