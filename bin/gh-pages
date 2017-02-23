@@ -6,7 +6,7 @@ rm ./dist/*.js*
 rm ./dist/*.woff*
 
 yarn install
-elm-package install
+elm-package install -y
 
 git branch -D gh-pages
 git checkout --quiet --orphan gh-pages

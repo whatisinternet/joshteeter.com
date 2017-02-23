@@ -1,5 +1,6 @@
 #!/bin/sh
 
-npm install
+yarn install
+elm-package install -y
 
-npm run app
+yarn run app
