@@ -1,6 +1,9 @@
 var base = require('./base.config.js');
 var webpack = require('webpack');
 var CompressionPlugin = require("compression-webpack-plugin");
+base.module.loaders.push(
+  { test: /\.elm$/, exclude: [/elm-stuff/, /node_modules/], loader: 'elm-webpack'}
+);
 base.plugins.push(
   new webpack.optimize.DedupePlugin(),
   new webpack.DefinePlugin({

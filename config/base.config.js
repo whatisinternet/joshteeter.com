@@ -14,7 +14,6 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.elm$/, exclude: [/elm-stuff/, /node_modules/], loader: 'elm-webpack'},
       { test: /\.(png|jpg)$/, loader: "file-loader?name=images/[name].[ext]" },
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
       { test: /\.(ttf|eot|svg)(\?v=[1-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"},
