@@ -6,21 +6,22 @@ import Html.Events exposing (onClick)
 
 import Views.Index exposing (view)
 import Messages.Index exposing (..)
+import Messages.Index
 import Types.Index exposing (Model, Project, Projects, Route)
-import Update.Index exposing (update)
+import Update.Index exposing (update, fetchRepos)
 import Navigation exposing (Location)
 import Router.Index
 
 -- Model
-initialModel : Location -> (Model, Cmd Msg)
-initialModel location =
+init : Location -> (Model, Cmd Msg)
+init location =
   let
       currentRoute =
         Router.Index.parseLocation location
+      model =
+        { route = currentRoute, projects = [] }
   in
-    ({ projects = generateProjects
-    , route = currentRoute
-    }, Cmd.none)
+     model ! [ fetchRepos ]
 
 -- Subscriptions
 subscriptions : Model -> Sub Msg
@@ -30,22 +31,8 @@ subscriptions model =
 -- Main
 main =
   Navigation.program Messages.Index.OnLocationChange
-      { init = initialModel
+      { init = init
       , update = update
       , view = view
       , subscriptions = subscriptions
       }
-
-
--- Misc -- Remove this
-generateProjects : Projects
-generateProjects =
-  [ (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  , (Project "elm" "https://elm-lang.org" "elm" "elm" 1 2 "https://elm-lang.org")
-  ]
