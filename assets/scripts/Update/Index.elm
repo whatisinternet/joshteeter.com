@@ -41,13 +41,12 @@ update msg model =
               |> parseLocation
       in
          ( { model | route = newRoute }, Cmd.none )
+
     Messages.Index.FetchRepos ->
       ( model, fetchRepos )
 
     Messages.Index.UpdateRepos (Ok projects) ->
-      Debug.log (toString projects)
       ( { model | projects = projects }, Cmd.none )
 
     Messages.Index.UpdateRepos (Err error) ->
-      Debug.log (toString error)
       ( model, Cmd.none )
