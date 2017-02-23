@@ -24,7 +24,7 @@ decodeProject : Decoder Project
 decodeProject =
   decode Project
     |> optional "language" string ""
-    |> optional "htmlUrl" string ""
+    |> optional "html_url" string ""
     |> optional "name" string ""
     |> optional "description" string ""
     |> optional "stargazers_count" int 0
