@@ -27,8 +27,8 @@ decodeProject =
     |> optional "html_url" string ""
     |> optional "name" string ""
     |> optional "description" string ""
-    |> optional "stargazers_count" int 0
     |> optional "forks" int 0
+    |> optional "stargazers_count" int 0
     |> optional "homepage" string ""
 
 
