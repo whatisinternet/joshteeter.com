@@ -1,0 +1,17 @@
+node_modules
+build/Release
+elm-stuff/
+logs
+*.log
+assets/
+node_modules/
+elm-stuff/
+config/
+slides/
+bin/
+dist/
+elm-package.json
+package.json
+yarn.lock
+.yarnclean
+README.md
